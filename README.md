@@ -2,8 +2,8 @@
 
 ## Introduction
 
-The following has been a team effort by Niall Emmart, representing Snarkify, Inc., Tony Wu, representing Ingonyama, Inc. and
-Fabrizio Murai, representing himself.
+The following has been a team effort by Niall Emmart, representing [Snarkify](https://snarkify.io/), Tony Wu, representing [Ingonyama](https://ingonyama.com/), and
+Fabrizio Muraca, representing himself.
 
 Our original goal was to submit both a GPU implementation and an FPGA implementation.  But despite our best efforts, the FPGA
 implementation didn't quite make it in time for the Oct 7th deadline.  We do intend to release the complete FPGA implementation
@@ -20,7 +20,7 @@ and any associated polynomials and computations.  Phase 2 - build a ground up C 
 witness generation through the 5 proving rounds.  The only part of the computation that remains in RUST is the transcript object.
 Phase 3 - implement the accelerators on the GPU and FPGA.
 
-| Person | Task |
+| Person | Tasks |
 |--|--|
 | Fabrizio Muai | Optimized the rust proof system, eliminating unused features and related computations |
 | Niall Emmart | GPU implementation, host side libraries, initial C proof system development |
@@ -61,4 +61,6 @@ Micro-bench mark performance.  All times in milliseconds.
 
 ## Questions & Comments
 
-For technical questions about this submission, please feel free to email, `nemmart at snarkify.io`.
+For technical questions about this submission, please feel free to email us at:
+ `nemmart at snarkify.io`, `tony at ingonyama.com`, and `fabrizio_m at hotmail.com`.
+
