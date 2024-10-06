@@ -13,6 +13,9 @@ in the next few weeks.
 
 The GPU implementation runs a batch of 4 proofs in 2.16 seconds, or about 540 milliseconds per proof on an A6000 Ada card.
 
+The baseline Rust code running on the host CPU takes around 490 seconds per proof.  Thus our GPU implementation is about 900x
+faster than the baseline host implementation.
+
 ## Approach
 
 Our approach consisted of three phases.   Phase 1 - optimize the Rust proof system, eliminate unused proof system features, such as lookups,
