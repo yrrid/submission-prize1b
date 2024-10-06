@@ -15,15 +15,15 @@ The GPU implementation runs a batch of 4 proofs in 2.16 seconds, or about 540 mi
 
 ## Approach
 
-Our approach had 3 phases.   Phase 1 - optimize the RUST proof system, eliminate unused proof system features, such as lookups,
+Our approach consisted of three phases.   Phase 1 - optimize the RUST proof system, eliminate unused proof system features, such as lookups,
 and any associated polynomials and computations.  Phase 2 - build a ground up C implementation of the proof system, from 
 witness generation through the 5 proving rounds.  The only part of the computation that remains in RUST is the transcript object.
 Phase 3 - implement the accelerators on the GPU and FPGA.
 
 | Person | Tasks |
 |--|--|
-| Fabrizio Muai | Optimized the rust proof system, eliminating unused features and related computations |
-| Niall Emmart | GPU implementation, host side libraries, initial C proof system development |
+| Fabrizio Muraca | Optimized the rust proof system, eliminating unused features and related computations |
+| Niall Emmart | GPU implementation, host side C library, initial C proof system development |
 | Tony Wu | FPGA implementation, rust integeration, analysis and data collection for initial C proof system |  
 
 ## Compiling and Running
@@ -47,7 +47,9 @@ nvcc -arch=sm_80 MicroBenchmarks.cu -o mb
 ./mb
 ```
 
-Micro-bench mark performance.  All times in milliseconds.
+Micro-benchmark performance of Snarkify's GPU implementations.  All times in milliseconds.
+Please note, these times are very fast, especially compared to other publicly available GPU
+libraries.
 
 | operation | size 2^22 | size 2^25 |
 |--|--|--|
@@ -57,7 +59,7 @@ Micro-bench mark performance.  All times in milliseconds.
 |coset-ntt||14.45|
 |polynomial eval|0.16|1.18|
 |polynomial quotient|0.69||
-|batch invert|0.774||
+|batch invert|0.77||
 
 ## Questions & Comments
 
